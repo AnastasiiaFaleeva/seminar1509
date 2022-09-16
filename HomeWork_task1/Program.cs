@@ -12,10 +12,10 @@ int number3 = Convert.ToInt32(Console.ReadLine());
 int max = number1;
 if (max < number2)
 {
-    int max = number2;
+    max = number2;
     if (max < number3)
     {
-        int max = number3;
+        max = number3;
         Console.WriteLine($"Максимальное число {max}");
     }
     else
@@ -23,9 +23,9 @@ if (max < number2)
         Console.WriteLine($"Максимальное число {max}");
     }
 }
-else if (max < number3);
+else if (max < number3)
 {
-    int max = number3;
+    max = number3;
     Console.WriteLine($"Максимальное число {max}");
 }
 else
