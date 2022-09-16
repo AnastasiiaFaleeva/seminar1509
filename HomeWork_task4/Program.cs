@@ -3,15 +3,15 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.Write("Введите первое число: ");
+Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int counter = 2;
 if (number <= 1) Console.WriteLine("Четные числа отсутствуют");
 if (number % 2 < 0) number = number-1;
-else;
+else
 while (counter <= number)
 {
-    Console.WriteLine(counter);
+    Console.Write($"{counter}, ");
     counter += 2;
     
 }
