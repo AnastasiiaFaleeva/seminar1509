@@ -7,11 +7,28 @@ Console.Write("Введите первое число: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
-if (number1 < number2)
+Console.Write("Введите третье число: ");
+int number3 = Convert.ToInt32(Console.ReadLine());
+int max = number1;
+if (max < number2)
 {
-    Console.Write($"max = {number2}, min = {number1}");
+    int max = number2;
+    if (max < number3)
+    {
+        int max = number3;
+        Console.WriteLine($"Максимальное число {max}");
+    }
+    else
+    {
+        Console.WriteLine($"Максимальное число {max}");
+    }
+}
+else if (max < number3);
+{
+    int max = number3;
+    Console.WriteLine($"Максимальное число {max}");
 }
 else
 {
-    Console.Write($"max = {number1}, min = {number2}");
+    Console.WriteLine($"Максимальное число {max}");
 }
