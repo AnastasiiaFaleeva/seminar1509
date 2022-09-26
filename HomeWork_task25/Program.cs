@@ -14,7 +14,6 @@ int DegreeNumber(int num1, int num2)
     for (int i = 1; i < num2; i++)
     {
         res = res*num1;
-
     }
         return res;
 }
