@@ -18,3 +18,4 @@ else
 {
     Console.WriteLine($"Нет {square} не является квадратом {number}");
 }
+
