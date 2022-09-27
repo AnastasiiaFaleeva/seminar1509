@@ -7,18 +7,16 @@
 Console.WriteLine("Введите число ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int Sam(int num)
+int Qalty(int num)
 {
     int counter = 0;
-    int res = 0;
-    while (num >= 0)
+    while (num > 0)
     {
         num = num / 10;
-        res = res+1;
         counter++;
     }
-    return res;
+    return counter;
 }
 
-int result = Sam(Math.Abs(number));
+int result = Qalty(Math.Abs(number));
 Console.WriteLine($"{number} -> {result}");
