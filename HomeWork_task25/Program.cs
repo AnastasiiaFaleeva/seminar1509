@@ -13,10 +13,14 @@ int DegreeNumber(int num1, int num2)
     int res = num1;
     for (int i = 1; i < num2; i++)
     {
-        res = res*num1;
+        res = res * num1;
     }
-        return res;
+    return res;
 }
 
-int result = DegreeNumber(number1, number2);
-Console.WriteLine($"{number1}, {number2} -> {result}");
+if (number2 > 0)
+{
+    int result = DegreeNumber(number1, number2);
+    Console.WriteLine($"{number1}, {number2} -> {result}");
+}
+else Console.WriteLine("Неверное значение второго числа ");
