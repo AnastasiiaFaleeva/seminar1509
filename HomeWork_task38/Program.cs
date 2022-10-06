@@ -5,25 +5,48 @@
 double[] CreateArrayRndInt(int size, int min, int max)    // МЕТОД ДЛЯ СОЗДАНИЯ МАССИВА ИЗ СЛУЧАЙНЫХ ЧИСЕЛ
 {
     double[] array = new double[size];
-    double rnd = new Random();    // Создали переменную для случайных чисел
+    var rnd = new Random();    // Создали переменную для случайных чисел
 
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.Next(min, max + 1);
+        array[i] = Math.Round((rnd.NextDouble() * 100), 2);
     }
     return array;
 }
 
-void PrintArray(int[] array) // МЕТОД ДЛЯ ПЕЧАТИ МАССИВА ИЗ СЛУЧАЙНЫХ ЧИСЕЛ
+void PrintArray(double[] array) // МЕТОД ДЛЯ ПЕЧАТИ МАССИВА ИЗ СЛУЧАЙНЫХ ЧИСЕЛ
 {
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        if (i < array.Length - 1) Console.Write($"{array[i]};   ");
         else Console.Write($"{array[i]}");
     }
     Console.WriteLine("]");
 }
 
-double[] arr = CreateArrayRndInt(10, 0, 1000);
+double MaxNumArray(double[] array)
+{
+    double max = array[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max) max = array[i];
+    }
+    return max;
+}
+
+double MinNumArray(double[] array)
+{
+    double min = array[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < min) min = array[i];
+    }
+    return min;
+}
+
+
+double[] arr = CreateArrayRndInt(10, 0, 100);
 PrintArray(arr);
+double resalt = Math.Round((MaxNumArray(arr) - MinNumArray(arr)), 2);
+Console.WriteLine(resalt);
