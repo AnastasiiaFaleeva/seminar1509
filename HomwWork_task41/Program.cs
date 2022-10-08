@@ -6,21 +6,20 @@
 Console.WriteLine("Введите количество чисел ");
 int count = Convert.ToInt32(Console.ReadLine());
 
-// if (count <= 0) Console.WriteLine("Ошибка. Количество чисел не может быть меньше 0, повторите ввод ");
-// int count1 = Convert.ToInt32(Console.ReadLine());
+if (count <= 0) Console.WriteLine("Ошибка. Количество чисел не может быть меньше 0, повторите ввод ");
 
 InputNumbers(count);
 
-
 void InputNumbers(int count)
 {
+   int x = default;
     while (count > 0)
     {
         Console.WriteLine("Введите число ");
         int a = Convert.ToInt32(Console.ReadLine());
-        int num1 = a;
+        if (a>0) x=x+1;
         count --;
-        num1++;
     }
+Console.WriteLine($"Количество чисел больше нуля -> {x}");
 }
 
