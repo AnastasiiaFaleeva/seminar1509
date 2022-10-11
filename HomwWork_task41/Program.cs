@@ -12,14 +12,14 @@ InputNumbers(count);
 
 void InputNumbers(int count)
 {
-   int x = default;
+    int x = default;
     while (count > 0)
     {
         Console.WriteLine("Введите число ");
         int a = Convert.ToInt32(Console.ReadLine());
-        if (a>0) x=x+1;
-        count --;
+        if (a > 0) x = x + 1;
+        count--;
     }
-Console.WriteLine($"Количество чисел больше нуля -> {x}");
+    Console.WriteLine($"Количество чисел больше нуля -> {x}");
 }
 
