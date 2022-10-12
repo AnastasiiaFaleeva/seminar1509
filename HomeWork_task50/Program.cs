@@ -40,11 +40,18 @@ void PrintMatrix(int[,] matrix)
 }
 
 
-
-int [,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
-PrintMatrix(array2D);
-
-bool SearchElemMatrix (int[,] matrix[i,j])
+void SearchElemMatrix (int[,] matrix, int i, int j)
 {
-   if (matrix ) 
+    if (i <= matrix.GetLength(1) & j <= matrix.GetLength(0))
+        Console.WriteLine($"Значение элемента {matrix[i, j]}");
+    else
+        Console.WriteLine("Элемент не найден ");
 }
+
+Console.WriteLine("Введите индекс строки ");
+int i = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите индекс столбца ");
+int j = Convert.ToInt32(Console.ReadLine());
+int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
+PrintMatrix(array2D);
+SearchElemMatrix(array2D, i, j);
