@@ -6,33 +6,10 @@
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
 NumbersNature(number);
-Console.WriteLine();
-int[] arrayFromNToOne = new int[number];
-FillArray(1, arrayFromNToOne);
-PrintArray(arrayFromNToOne);
-
 
 void NumbersNature (int num)
 {
     if (num == 0) return;
-    Console.Write($"{num} ");
+    Console.Write($"{num}, ");
     NumbersNature (num - 1);
-}
-
-void FillArray (int num, int[] arr)
-{
-    arr[arr.Length - num] = num;
-    if (num == arr.Length) return;
-    FillArray (num + 1, arr);   
-}
-
-void PrintArray (int[] array)
-{
-    Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
-        else Console.Write($"{array[i]}");
-    }
-    Console.WriteLine("]");
 }
